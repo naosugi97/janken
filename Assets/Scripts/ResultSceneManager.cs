@@ -12,7 +12,8 @@ public class ResultSceneManager : MonoBehaviour
     [SerializeField] public Transform HandTransform;
     [SerializeField] CardController cardPrefab;
 
-    public int enemyhand;
+    public static int enemyhand;
+    public static int myhand;
 
 
     public void Awake(){
@@ -22,21 +23,40 @@ public class ResultSceneManager : MonoBehaviour
         }
         enemyhand = Random.Range(1, 4);
         // Debug.Log("enemyhand" + enemyhand);
-        Debug.Log("自分の手札" + GotoResult.hnum);
+        // Debug.Log("自分の手札" + GotoResult.hnum);
+        if (GotoResult.hnum == "guu"){
+            myhand = 1;
 
+        }else if (GotoResult.hnum == "tyoki"){
+            myhand = 2;
+        }else if (GotoResult.hnum == "paa"){
+            myhand = 3;
+        }else{
+            myhand = Random.Range(1, 4);
+        }   
 
     }
     void Start(){
 
     
         CreateCard(EnemyHandTransform, enemyhand);//自分の手札のカードを再生成
-        if (GotoResult.hnum == "guu"){
-            CreateCard(HandTransform, 1);
-        }else if (GotoResult.hnum == "tyoki"){
-            CreateCard(HandTransform, 2);
-        }else{
-            CreateCard(HandTransform, 3);
-        }
+        CreateCard(HandTransform, myhand);
+        
+        // if (GotoResult.hnum == "guu"){
+        //     myhand = 1;
+        //     CreateCard(HandTransform, 1);
+
+        // }else if (GotoResult.hnum == "tyoki"){
+        //     myhand = 2;
+        //     CreateCard(HandTransform, 2);
+        // }else if (GotoResult.hnum == "paa"){
+        //     myhand = 3;
+        //     CreateCard(HandTransform, 3);
+        // }else{
+        //     myhand = Random.Range(1, 4);
+        //     CreateCard(HandTransform, myhand);
+        // }
+        
         
     }
 

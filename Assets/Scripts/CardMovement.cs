@@ -13,7 +13,7 @@ public class CardMovement : MonoBehaviour, IDragHandler, IBeginDragHandler, IEnd
     // Transform hand = GameManager.HandTransform;
 
     
-    public GameManager gm;
+    // public GameManager gm;
     
     // public Transform hand;
     public int ab;

@@ -73,3 +73,7 @@ crashlytics-build.properties
 
 #.DS_Store消す
 .DS_Store
+Library/.DS_Store
+Library/.DS_Store
+UserSettings/.DS_Store
+.DS_Store
