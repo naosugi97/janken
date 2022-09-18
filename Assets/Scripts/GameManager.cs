@@ -6,6 +6,9 @@ public class GameManager : MonoBehaviour
 {
     // public static GameManager Instance{get; private set;}
     public static GameManager instance;
+
+    public static int MyPoint;//マイポインt
+    //public static int EnemyPoint;//敵のポイント 
     //手札にカードを生成
     [SerializeField] public Transform FieldTransform;//位置に関するものはTransform
     [SerializeField] public Transform HandTransform;

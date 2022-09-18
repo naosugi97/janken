@@ -16,22 +16,31 @@ public class ResultText : MonoBehaviour
         }else if (ResultSceneManager.enemyhand == 1){
             if (ResultSceneManager.myhand == 3){
                 GetComponent<Text>().text = "勝ち";
+                GameManager.MyPoint += 1;
             }else{
                 GetComponent<Text>().text = "負け";
             }
         }else if (ResultSceneManager.enemyhand == 2){
             if (ResultSceneManager.myhand == 1){        
                 GetComponent<Text>().text = "勝ち";
-            }else{
+                GameManager.MyPoint += 1;
+            }
+            else
+            {
                 GetComponent<Text>().text = "負け";
             }
         }else{
             if (ResultSceneManager.myhand == 2){        
                 GetComponent<Text>().text = "勝ち";
-            }else{
+                GameManager.MyPoint += 1;
+            }
+            else
+            {
                 GetComponent<Text>().text = "負け";
             }            
         }
+
+
     }
 
     
